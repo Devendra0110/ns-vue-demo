@@ -27,6 +27,10 @@ module.exports = (env) => {
             .tap((options) => ({
                 ...options,
                 compiler: require("vue-template-compiler"),
+                compilerOptions: {
+                    whitespace: 'condense',
+                    preserveWhitespace: false,
+                },
             }));
     });
 
